@@ -64,3 +64,41 @@ pnpm dev
 
 ## Розділ 2. CSS-стилізація
 
+### 1. Додавання глобальних стилів
+
+Перейшла до файлу:
+
+`/app/layout.tsx`
+
+І додала імпорт глобальних стилів.
+Тепер головна сторінка відображається зі стилями.
+
+![Global styles](./screenshots/photo_2026-03-02_20-28-12.jpg)
+
+### 2. Використання Tailwind у page.tsx
+
+У файлі `/app/page.tsx` вже використовуються класи Tailwind:
+
+- flex
+- min-h-screen
+- p-6
+- bg-blue-500
+- rounded-lg
+
+Це означає, що стилізація відбувається без окремих CSS-файлів для компонентів.
+
+### 3. Додавання власного Tailwind-елемента
+
+Я додала перед елементом `<p>` у `/app/page.tsx` наступний код:
+
+```jsx
+<div
+  className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px] border-l-transparent border-r-transparent border-b-black"
+/>
+```
+
+Після збереження змін на сторінці з’явився чорний трикутник.
+Це приклад створення фігури лише за допомогою Tailwind-класів.
+
+![Tailwind triangle](./screenshots/photo_2026-03-02_20-28-17.jpg)
+
