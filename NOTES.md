@@ -53,7 +53,7 @@ pnpm dev
 
 Це означає, що головна сторінка працює, а маршрут `/login` поки що не знайдений.
 
-![Dev server](./screenshots/03-dev-server.png)
+![Dev server](./screenshots/photo_2026-03-02_16-06-19.jpg)
 
 ### 4. Перевірка роботи в браузері
 Відкрила http://localhost:3000 у браузері.
@@ -102,3 +102,31 @@ pnpm dev
 
 ![Tailwind triangle](./screenshots/photo_2026-03-02_20-28-17.jpg)
 
+
+## Розділ 3. Оптимізація шрифтів та зображень
+
+### 1. Додавання основного шрифту
+
+У папці `/app/ui` створила новий файл:
+
+`fonts.ts`
+
+Імпортувала шрифт Inter з модуля `next/font/google` та вказала підмножину `latin`.
+
+### 2. Додавання додаткового шрифту
+
+Додала шрифт Lusitana з вагами 400 і 700 у fonts.ts.
+
+### 3. Додавання зображень через next/image
+
+Імпортувала компонент Image у /app/page.tsx:
+
+```jsx
+import Image from 'next/image';
+```
+
+Додала зображення для desktop та mobile
+
+Головна сторінка відобразилась коректно.
+
+![Browser view](./screenshots/photo_2026-03-03_11-35-47.jpg)
