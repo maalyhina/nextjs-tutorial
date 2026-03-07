@@ -257,3 +257,29 @@ http://localhost:3000/dashboard/invoices
 
 ![Browser view](./screenshots/photo_2026-03-06_20-08-48.jpg)
 
+
+## Розділ 6. Налаштування бази даних
+
+### 1. Завантаження проєкту на GitHub  
+Репозиторій підключено до Vercel для автоматичного розгортання.  
+
+### 2. Створення облікового запису Vercel та підключення GitHub
+План: Hobby, автоматичне попереднє розгортання при push та preview URL для pull request.  
+
+### 3. Додавання змінних середовища 
+Секрети скопійовано у `.env` і додано до `.gitignore`.  
+
+![.env.local](./screenshots/photo_2026-03-07_20-57-24.jpg)
+
+### 5. Заповнення бази даних початковими даними (Seeding)
+Виконано через API `http://localhost:3000/seed`.  
+Повідомлення після виконання: `Database seeded successfully`.  
+
+Відображення сторінки:
+![Database seeded](./screenshots/photo_2026-03-07_20-57-24.jpg)
+
+### 6. Виконання SQL-запиту для перевірки
+Запит у `app/query/route.ts` повертає `amount` та `name` клієнта.  
+
+Відображення сторінки:
+![Query result](./screenshots/photo_2026-03-07_21-33-18.jpg)
